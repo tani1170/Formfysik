@@ -1,0 +1,97 @@
+---
+import "../styles/global.css";
+import Medlembtn from "./Medlembtn.astro";
+
+const {
+  titel,
+  info1,
+  info2,
+  info3,
+  beskrivelse,
+  knap,
+} = Astro.props;
+---
+
+<section>
+  <div class="content">
+    <h2>{titel}</h2>
+    <ul class="bread-bold">
+      <li>{info1}</li>
+      <li>{info2}</li>
+      <li>{info2}</li>
+    </ul>
+
+    <div class="img_mobile">
+      <img
+        src="public/img/placeholder.webp"
+        alt=""
+      />
+    </div>
+    <p class="knap bread">
+      {beskrivelse}
+    </p>
+    {knap == true && <Medlembtn />}
+  </div>
+  <div class="img_wrapper">
+    <img
+      src="public/img/placeholder.webp"
+      alt=""
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  .img_wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .img_mobile {
+    display: none;
+  }
+
+  img {
+    object-fit: contain;
+    height: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 30rem;
+  }
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    color: var(--color-bread-text);
+  }
+
+  li {
+    margin: 0;
+    color: var(--color-bread-text);
+  }
+  @media (max-width: 991px) {
+    section {
+    }
+
+    .img_mobile {
+      display: initial;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .img_wrapper {
+      display: none;
+    }
+  }
+</style>

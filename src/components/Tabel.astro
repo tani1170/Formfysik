@@ -1,0 +1,921 @@
+---
+import "../styles/global.css";
+import Ugedage from "./Ugedage.astro";
+import Ugefilter from "./Ugefilter.astro";
+import Holdcard from "./Holdcard.astro";
+import Farvekode from "./Farvekode.astro";
+import { AstroComponent } from "astro/dist/runtime/server/render/astro";
+
+const { filterObjects, name } =
+  Astro.props;
+---
+
+<section>
+  <!-- KNAPPER -->
+  <div class="holdknap_wrapper">
+    <!-- alle -->
+    <button
+      onclick="filterObjects('alle')"
+      class="holdkategori filtertext"
+    >
+      <div class=""></div>
+      Alle
+    </button>
+
+    <!-- Styrke og kondition knap -->
+    <button
+      onclick="filterObjects('holdstyrke')"
+      class="holdkategori filtertext"
+    >
+      <div class="styrkefarve"></div>
+      Styrke & Kondition
+    </button>
+
+    <!-- Power knap -->
+    <button
+      onclick="filterObjects('powerhold')"
+      class="holdkategori filtertext"
+    >
+      <div class="powerfarve"></div>
+      Power
+    </button>
+
+    <!-- Body and mind knap -->
+    <button
+      onclick="filterObjects('bodymindhold')"
+      class="holdkategori filtertext"
+    >
+      <div class="bodymindfarve"></div>
+      Body & Mind
+    </button>
+
+    <!-- Spinninghold knap -->
+    <button
+      onclick="filterObjects('spinninghold')"
+      class="holdkategori filtertext"
+    >
+      <div class="spinningfarve"></div>
+      Spinning
+    </button>
+
+    <!-- Dansehold knap -->
+    <button
+      onclick="filterObjects('dansehold')"
+      class="holdkategori filtertext"
+    >
+      <div class="danseholdfarve"></div>
+      Dansehold
+    </button>
+
+    <!-- seniorhold knap -->
+
+    <button
+      onclick="filterObjects('seniorhold')"
+      class="holdkategori filtertext"
+    >
+      <div class="seniorholdfarve">
+      </div>
+      Seniorhold
+    </button>
+
+    <!-- specialhold knap -->
+
+    <button
+      onclick="filterObjects('specialhold')"
+      class="holdkategori filtertext"
+    >
+      <div class="specialholdfarve">
+      </div>
+      Specialhold
+    </button>
+  </div>
+
+  <!-- TABEL -->
+  <div class="tabel_wrapper">
+    <!-- UGE + LOKATION -->
+    <!-- <div class="tabel_head">
+      <div class="uge">
+        <Ugefilter ugenr="46" />
+      </div>
+
+      <div class="lokationfilter">
+        <button
+          class="lokation bread-bold"
+        >
+          Vesterbro</button
+        >
+        <button
+          class="lokation bread-bold"
+        >
+          Amagerbro</button
+        >
+        <button
+          class="lokation bread-bold"
+        >
+          Østerbro</button
+        >
+      </div>
+
+    </div> -->
+
+    <!-- TABEL DAGE  + kort-->
+    <div class="tabel_mid">
+      <!-- MANDAG -->
+
+      <div class="bookingkort">
+        <Ugedage
+          ugedag="Mandag"
+          ugedato="12/12"
+        />
+        <div class="holdstyrke kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={true}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={true}
+            liste={false}
+            fyldt={false}
+          />
+        </div>
+
+        <div class="powerhold kort">
+          <Holdcard
+            holdtitel="Crossfit"
+            holdfarve=""
+            power={true}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={false}
+            fyldt={true}
+          />
+        </div>
+        <div class="styrkehold kort">
+          <Holdcard
+            class="styrkehold"
+            holdtitel="Styrke puls"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={true}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Sander Dalh"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="bodymindhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={true}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+      </div>
+
+      <!-- TIRDAGS -->
+      <div class="bookingkort">
+        <Ugedage
+          ugedag="Tirsdag"
+          ugedato="12/12"
+        />
+        <div class="dansehold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={true}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={false}
+            fyldt={true}
+          />
+        </div>
+
+        <div class="seniorhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={true}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="bodymindhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={true}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={true}
+            liste={false}
+            fyldt={false}
+          />
+        </div>
+        <div class="styrkehold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={true}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="spinninghold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={true}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+      </div>
+
+      <!-- ONSDAG -->
+      <div class="bookingkort">
+        <Ugedage
+          ugedag="Onsdag"
+          ugedato="12/12"
+        />
+        <div class="powerhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={true}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={false}
+            fyldt={true}
+          />
+        </div>
+        <div class="specialhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={true}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="spinninghold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={true}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={true}
+            liste={false}
+            fyldt={false}
+          />
+        </div>
+        <div class="powerhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={true}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+      </div>
+
+      <!-- TORSDAG -->
+      <div class="bookingkort">
+        <Ugedage
+          ugedag="Torsdag"
+          ugedato="12/12"
+        />
+        <div class="dansehold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={true}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="bodymind kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={true}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={false}
+            fyldt={true}
+          />
+        </div>
+        <div class="styrkehold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={true}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+      </div>
+
+      <!-- FREDAG -->
+      <div class="bookingkort">
+        <Ugedage
+          ugedag="Fredag"
+          ugedato="12/12"
+        />
+        <div class="spinninghold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={true}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="seniorhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={true}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="specialhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={true}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={false}
+            fyldt={true}
+          />
+        </div>
+        <div class="bodymindhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={true}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="powerhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={true}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+      </div>
+
+      <!-- LØRDAG -->
+      <div class="bookingkort">
+        <Ugedage
+          ugedag="Lørdag"
+          ugedato="12/12"
+        />
+        <div class="spinning kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={true}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="dansehold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={true}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="powerhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={true}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="styrkehold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={true}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+      </div>
+
+      <!-- SØNDAG -->
+      <div class="bookingkort">
+        <Ugedage
+          ugedag="Søndag"
+          ugedato="12/12"
+        />
+        <div class="bodymindhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={true}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="specialhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={true}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={true}
+            fyldt={false}
+          />
+        </div>
+        <div class="seniorhold kort">
+          <Holdcard
+            holdtitel="yoga"
+            holdfarve=""
+            power={false}
+            seniorhold={true}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            instruktor="v/ Mona Lindegaard"
+            time="07:00-08:30"
+            ledig={false}
+            liste={false}
+            fyldt={true}
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="tabel_footer">
+      <!-- FARVEKODER -->
+      <div class="farvekode">
+        <Farvekode
+          beskrivelse="Plads på holdet"
+          ledig={true}
+          liste={false}
+          fyldt={false}
+        />
+        <Farvekode
+          beskrivelse="Plads på holdet"
+          ledig={false}
+          liste={true}
+          fyldt={false}
+        />
+        <Farvekode
+          beskrivelse="Plads på holdet"
+          ledig={false}
+          liste={false}
+          fyldt={true}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!------------------------------ STYLES ------------------------------>
+<style>
+  section {
+    margin-top: 22rem;
+    margin-bottom: 10rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  /* --------------- HOLDKATEGORI KNAPPER ---------------- */
+  .holdknap_wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  button {
+    background-color: var(
+      --color-footer-background
+    );
+
+    border: none;
+    padding: 0.7rem;
+    color: var(--color-bread-text);
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .show {
+    display: block;
+  }
+  .kort {
+    display: none;
+  }
+
+  /* ------------- tabel wrapper -------------- */
+  .tabel_wrapper {
+    background-color: var(
+      --color-tabel-bg
+    );
+
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  /* --------------TABEL HEADER + uge + lokation ----------- */
+  .tabel_head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .uge {
+    grid-column: 2;
+    place-content: center;
+    place-self: center;
+  }
+
+  .lokationfilter {
+    grid-column: 3;
+    display: flex;
+    gap: 1rem;
+    place-content: center;
+    place-self: center;
+  }
+  .lokationfilter button {
+    height: fit-content;
+  }
+
+  /* ------------ TABEL MIDT + HOLDKORT + DAGE/DATO ---------------- */
+
+  .tabel_mid {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(
+      --color-tabel-holdcard
+    );
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .bookingkort {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  /* ------------- TABEL FOOTER  + FARVEKODER ------------------ */
+  .farvekode {
+    background-color: var(
+      --color-tabel-holdcard
+    );
+    top: 0;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    gap: 2rem;
+    place-content: flex-end;
+    padding: 1rem;
+  }
+
+  /* -------------- Holdfarver ---------------- */
+  .powerfarve {
+    background-color: var(
+      --color-holdfarve-power
+    );
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+  }
+  .styrkefarve {
+    background-color: var(
+      --color-holdfarve-styrkekondition
+    );
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+  }
+  .bodymindfarve {
+    background-color: var(
+      --color-holdfarve-bodymind
+    );
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+  }
+  .spinningfarve {
+    background-color: var(
+      --color-holdfarve-spinninghold
+    );
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+  }
+  .danseholdfarve {
+    background-color: var(
+      --color-holdfarve-dansehold
+    );
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+  }
+  .seniorholdfarve {
+    background-color: var(
+      --color-holdfarve-seniorhold
+    );
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+  }
+
+  .specialholdfarve {
+    background-color: var(
+      --color-holdfarve-specialhold
+    );
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+  }
+</style>
+
+<!-- ------------------- JAVESCRIPT ----------------- -->
+<script>
+  function filterObjects(c) {
+    var x, i;
+    x =
+      document.getElementsByClassName(
+        "kort"
+      );
+    if (c == "alle") c = "";
+    for (i = 0; i < x.lenght; i++) {
+      removeClass(x[i], "show");
+      if (
+        x[i].className.indexOf(c) > -1
+      )
+        addClass(x[i], "show");
+    }
+  }
+
+  function addClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = element.name.split(" ");
+    for (i = 0; i < arr2.lenght; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className +=
+          " " + arr2[i];
+      }
+    }
+  }
+
+  function removeClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = element.name.split(" ");
+    for (i = 0; i < arr2.lenght; i++) {
+      while (
+        arr1.indexOf(arr2[i]) > -1
+      ) {
+        arr1.splice(
+          arr1.indexOf(arr2[i]),
+          1
+        );
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+</script>

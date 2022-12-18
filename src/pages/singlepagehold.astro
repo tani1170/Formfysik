@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Singlepage from "../components/Singlepage.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/lhr7bio.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>FormFysik</title>
+  </head>
+  <body class="body-bg">
+    <Header />
+    <Singlepage
+      titel="Stram Op"
+      info1="Kalorieforbrænding: Mellem"
+      info2="Alle kan være med"
+      info3="Vargihed: 55 minutter"
+      beskrivelse="Stram op er styrketræning for hele din krop, hvor du træner alle kroppens større muskelgrupper. Timen består af styrkeøvelser med mange gentagelser, således at du både træner din muskeludholdenhed og øger din forbrænding. Stram op er for alle, og sværhedsgraden kan nemt justeres, så det passer netop til dit niveau. I træningen vil indgå håndvægte, stepbænke, vægtstænger, balancebolde mm."
+      knap={true}
+    />
+
+    <Footer />
+  </body>
+
+  <style></style>
+</html>

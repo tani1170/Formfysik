@@ -1,0 +1,100 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Center from "../components/Center.astro";
+
+import LokationSektion from "../components/lokation_sektion.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/lhr7bio.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>FormFysik</title>
+  </head>
+  <body class="body-bg">
+    <Header />
+    <section>
+      <div class="content_wrapper">
+        <div>
+          <h2>Kontakt</h2>
+          <div class="kontakt">
+            <Center
+              centernavn="FormFysisk Amager"
+              addresse="  Amager Strandvej 56 2300 københavn S"
+              email="info@formamager.dk"
+              telefon="3331 2220"
+            />
+
+            <Center
+              centernavn="FormFysisk Vesterbro"
+              addresse=" Vesterbrogade 95A 1620 København V"
+              email="  info@formvesterbro.dk"
+              telefon="3331 2220"
+            />
+
+            <Center
+              centernavn="FormFysisk Østerbro"
+              addresse="Østerbrogade 37 2100 København Ø"
+              email="info@formoesterbro.dk"
+              telefon="3331 2220"
+            />
+          </div>
+        </div>
+        <div class="open">
+          <h4></h4>
+        </div>
+      </div>
+      <Footer />
+    </section>
+  </body>
+
+  <style>
+    .kontakt {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .content_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .open {
+      width: 25rem;
+      height: 30rem;
+      background-color: var(
+        --color-tabel-holdcard
+      );
+      border-radius: 10px;
+    }
+
+    section {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+    h2 {
+      margin: 0;
+      padding-bottom: 1.5rem;
+    }
+  </style>
+</html>

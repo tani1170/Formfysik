@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+
+const { splashbillede } = Astro.props;
+---
+
+<section>
+  <div class="content">
+    <h1>
+      FITNESS MED FOKUS PÅ KVALITET
+    </h1>
+    <h3>
+      Kom i gang med træningen i dag! <br
+      />
+      Første måned gratis og programlægning!
+    </h3>
+  </div>
+
+  <img
+    src="public/img/splash_landing.svg"
+    alt=""
+    {splashbillede}
+  />
+</section>
+
+<style>
+  section {
+    display: block;
+    overflow: hidden;
+  }
+
+  .content {
+    width: 45rem;
+    padding-left: 7rem;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+    color: var(--color-bread-text);
+  }
+
+  img {
+    position: absolute;
+    width: 50rem;
+    top: 20%;
+    left: 43.8%;
+    z-index: -1;
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import "../styles/global.css";
+
+const { ugenr } = Astro.props;
+---
+
+<div class="head">
+  <h3 class="uge">
+    UGE {ugenr}
+  </h3>
+</div>
+
+<style>
+  h3 {
+    color: var(--color-bread-text);
+  }
+</style>

@@ -1,0 +1,198 @@
+:root {
+  --color-purple: #b098c8;
+  --color-yellow-light: #e3e575;
+  --color-light-red: #e57975;
+  --color-green: #85e08a;
+  --color-yellow: #fabb14;
+  --color-red-400: #c36156;
+  --color-pink-200: #fac2cd;
+  --color-orange-dark: #daa66d;
+  --color-blue-200: #98d2e0;
+  --color-mint-light: #d1e7e2;
+  --color-mint: #8bb9b1;
+  --color-mint-dark: #6c908c;
+  --color-off-white: #f6fffe;
+  --color-grey-800: #3d3d3d;
+  --color-green-dark: #405e5b;
+  --color-dark-purple: #b098c8;
+
+  /* KUN DISSE VIRKER -- HVORFOR? */
+
+  /* Footer */
+  --color-footer-background: #3d3d3d;
+  --color-footer-text: #f6fffe;
+
+  /* Landing */
+  --color-info-boxone: #d1e7e2;
+  --color-info-boxtwo: #8bb9b1;
+  --color-info-boxthree: #6c908c;
+  --color-bread-text: #f6fffe;
+
+  /* Bookingcards  */
+  --color-status-ledig: #85e08a;
+  --color-status-liste: #e3e575;
+  --color-status-fyldt: #c36156;
+  --color-card-bookbg: #b7b7b7;
+
+  /* Holdtyper */
+
+  --color-holdfarve-specialhold: #b098c8;
+  --color-holdfarve-styrkekondition: #fabb14;
+  --color-holdfarve-power: #c36156;
+  --color-holdfarve-dansehold: #fac2cd;
+  --color-holdfarve-bodymind: #daa66d;
+  --color-holdfarve-seniorhold: #98d2e0;
+  --color-holdfarve-spinninghold: #9bb26c;
+
+  /* cardtabel bg*/
+  --color-tabel-bg: #6f9d96;
+  --color-tabel-holdcard: #405e5b;
+
+  /* filter lokation */
+  --color-tabel-background: #d9d9d9;
+  --color-tabel-active: #405e5b;
+  --color-tabel-text: #405e5b;
+
+  /* btn colors */
+  --color-btn-hover: #a7e1d8;
+
+  /* Aliasser */
+}
+
+body {
+  margin: 0;
+  background: rgb(77, 108, 100);
+  /* background: linear-gradient(
+    90deg,
+    rgba(77, 108, 100, 1) 39%,
+    rgba(143, 193, 185, 1) 100%
+  ); */
+}
+h1 {
+  font-family: co-headline, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+
+h2 {
+  font-family: co-headline, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 45px;
+  color: var(--color-bread-text);
+}
+
+h3 {
+  font-family: kanit, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 27px;
+}
+
+h4 {
+  font-family: co-headline, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: var(--color-bread-text);
+}
+
+.font-btn {
+  font-family: kanit, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 27px;
+}
+
+.cardtitel {
+  font-family: kanit, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 27px;
+  color: var(--color-bread-text);
+}
+
+.filtertext {
+  font-family: kanit, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.navigation {
+  font-family: kanit, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 27px;
+  color: var(--color-bread-text);
+}
+
+.bread {
+  font-family: kanit, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 17px;
+}
+
+.bread-bold {
+  font-family: kanit, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  margin: 0;
+}
+
+.cardinstructor {
+  font-family: kanit, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  color: var(--color-footer-background);
+}
+
+.cardtime {
+  font-family: kanit, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.footer {
+  font-family: kanit, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.link {
+  font-family: kanit, sans-serif;
+  font-weight: 400;
+  text-decoration: underline;
+  font-size: 17px;
+  color: var(--color-footer-text);
+}
+
+a {
+  color: var(--color-footer-text);
+}
+.spacebody {
+  padding: 20px;
+}
+
+.spacesides {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.spacetopbottom {
+  margin-top: 20px;
+  margin-bottom: 2px;
+}
+.body-bg {
+  background: rgb(77, 108, 100);
+  background: linear-gradient(
+    90deg,
+    rgba(77, 108, 100, 1) 39%,
+    rgba(143, 193, 185, 1) 100%
+  );
+}

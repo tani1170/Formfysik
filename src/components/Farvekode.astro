@@ -1,0 +1,71 @@
+---
+import "../styles/global.css";
+const {
+  beskrivelse,
+  ledig,
+  liste,
+  fyldt,
+} = Astro.props;
+---
+
+<div class="wrapper">
+  <div class="farve">
+    {
+      ledig == true && (
+        <div class="ledig" />
+      )
+    }
+    {
+      liste == true && (
+        <div class="liste" />
+      )
+    }
+    {
+      fyldt == true && (
+        <div class="fyldt" />
+      )
+    }
+  </div>
+
+  <p class="cardtime">
+    {beskrivelse}
+  </p>
+</div>
+
+<style>
+  .wrapper {
+    display: flex;
+    gap: 1rem;
+    place-items: end;
+  }
+
+  .farve {
+    height: 2.5rem;
+    display: flex;
+  }
+  p {
+    margin: 0;
+    color: var(--color-bread-text);
+  }
+
+  .ledig {
+    background-color: var(
+      --color-status-ledig
+    );
+    width: 1rem;
+  }
+
+  .liste {
+    background-color: var(
+      --color-status-liste
+    );
+    width: 1rem;
+  }
+
+  .fyldt {
+    background-color: var(
+      --color-status-fyldt
+    );
+    width: 1rem;
+  }
+</style>

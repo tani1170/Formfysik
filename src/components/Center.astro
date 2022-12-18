@@ -1,0 +1,43 @@
+---
+import "../styles/global.css";
+
+const {
+  centernavn,
+  addresse,
+  email,
+  telefon,
+} = Astro.props;
+---
+
+<div>
+  <h3>{centernavn}</h3>
+  <p class="bread">
+    {addresse}
+  </p>
+  <p class="bread">
+    <a href=""> E-mail: {email}</a>
+  </p>
+  <p class="bread">
+    <a href=""> Telefon: {telefon}</a>
+  </p>
+</div>
+
+<style>
+  div {
+    padding-bottom: 1rem;
+  }
+  p {
+    margin: 0;
+    color: var(--color-bread-text);
+    padding-bottom: 0.5rem;
+  }
+  h3 {
+    margin: 0;
+    color: var(--color-bread-text);
+    padding-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>

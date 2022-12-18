@@ -1,0 +1,160 @@
+---
+import Medlembtn from "../components/Medlembtn.astro";
+import "../styles/global.css";
+
+const {
+  titel,
+  center,
+  addresse,
+  email,
+  telefon,
+  parkeringsinfo,
+  centerinfo,
+  left,
+  right,
+} = Astro.props;
+---
+
+<section class="lokation_wrapper">
+  {
+    left == true && (
+      <>
+        <div class="left">
+          <div class="content">
+            <h3>{titel}</h3>
+            <div class="information">
+              <p class="bread-bold">
+                {center}
+              </p>
+              <p class="bread">
+                {addresse}
+              </p>
+              <p class="bread">
+                E-mail:
+                {email}
+              </p>
+              <p class="bread">
+                Telefon:
+                {telefon}
+              </p>
+            </div>
+            <div class="centerinfo">
+              <p class="bread">
+                {centerinfo}
+              </p>
+            </div>
+            <div class="parkeringsinfo">
+              <p class="bread-bold">
+                Parkering
+              </p>
+              <p class="bread">
+                {parkeringsinfo}
+              </p>
+            </div>
+          </div>
+          <div class="image">
+            <img
+              src="public/img/placeholder.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </>
+    )
+  }
+
+  {
+    right == true && (
+      <>
+        <div class="right">
+          <div class="image">
+            <img
+              src="public/img/placeholder.webp"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3>{titel}</h3>
+            <div class="information">
+              <p class="bread-bold">
+                {center}
+              </p>
+              <p class="bread">
+                {addresse}
+              </p>
+              <p class="bread">
+                E-mail:
+                {email}
+              </p>
+              <p class="bread">
+                Telefon:
+                {telefon}
+              </p>
+            </div>
+            <div class="centerinfo">
+              <p class="bread">
+                {centerinfo}
+              </p>
+            </div>
+            <div class="parkeringsinfo">
+              <p class="bread-bold">
+                Parkering
+              </p>
+              <p class="bread">
+                {parkeringsinfo}
+              </p>
+            </div>
+          </div>
+        </div>
+      </>
+    )
+  }
+</section>
+
+<style>
+  section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    overflow: hidden;
+    gap: 2rem;
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    overflow: hidden;
+    gap: 2rem;
+  }
+
+  .image {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    place-content: center;
+  }
+  p {
+    margin: 0;
+    color: var(--color-bread-text);
+  }
+  h3 {
+    margin: 0;
+    color: var(--color-bread-text);
+  }
+</style>

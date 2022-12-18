@@ -1,0 +1,146 @@
+---
+import Header from "../components/Header.astro";
+import Splash from "../components/Splash.astro";
+import Footer from "../components/Footer.astro";
+import Kategori from "../components/Kategori.astro";
+import "../styles/global.css";
+import Medlembtn from "../components/Medlembtn.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/lhr7bio.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>FormFysik</title>
+  </head>
+  <body class="body-bg">
+    <Header />
+    <Splash />
+    <div class="values">
+      <!-- Første boks -->
+      <div class="infovalues info1">
+        <div class="valuetitel">
+          <h1>319</h1>
+          <h3>kr.</h3>
+        </div>
+        <p class="bread">
+          pr. måned. alt inklusiv
+        </p>
+      </div>
+
+      <!-- Anden boks -->
+      <div class="infovalues info2">
+        <div class="valuetitel">
+          <h1>3</h1>
+          <h3>Fitnesscentre</h3>
+        </div>
+        <p class="bread">
+          træn i alle centre
+        </p>
+      </div>
+
+      <!-- Trejde boks -->
+      <div class="infovalues info3">
+        <div class="valuetitel">
+          <h1>9</h1>
+          <h3>fysioterapeuter</h3>
+        </div>
+        <p class="bread">
+          og over 20 fys-studerende
+        </p>
+      </div>
+    </div>
+    <section class="kategorier">
+      <Kategori
+        holdtitel="yoga"
+        holdfarve=""
+        power={true}
+        seniorhold={false}
+        dansehold={false}
+        spinning={false}
+        styrkekondition={false}
+        bodymind={false}
+        specialhold={false}
+      />
+      <Kategori />
+    </section>
+
+    <section class="stepbystep">
+    </section>
+    <Footer />
+  </body>
+
+  <style>
+    /* INFOGRAFIK */
+    .values {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .infovalues {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      color: var(
+        --color-footer-background
+      );
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .valuetitel {
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+    }
+
+    .valuetitel h1,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    .info1 {
+      background-color: var(
+        --color-info-boxone
+      );
+    }
+
+    .info2 {
+      background-color: var(
+        --color-info-boxtwo
+      );
+    }
+    .info3 {
+      background-color: var(
+        --color-info-boxthree
+      );
+    }
+
+    /*  KATEGORIER */
+
+    .kategorier {
+      background-color: var(
+        --color-off-white
+      );
+      display: flex;
+      justify-content: space-evenly;
+    }
+  </style>
+</html>

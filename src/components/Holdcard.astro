@@ -1,0 +1,217 @@
+---
+import "../styles/global.css";
+
+const {
+  holdtitel,
+  holdfarve,
+  power,
+  seniorhold,
+  dansehold,
+  spinning,
+  styrkekondition,
+  bodymind,
+  specialhold,
+  instruktor,
+  time,
+  ledig,
+  liste,
+  fyldt,
+} = Astro.props;
+---
+
+<article>
+  <div class="status">
+    {
+      ledig == true && (
+        <div class="ledig" />
+      )
+    }
+    {
+      liste == true && (
+        <div class="liste" />
+      )
+    }
+    {
+      fyldt == true && (
+        <div class="fyldt" />
+      )
+    }
+  </div>
+  <div class="content">
+    <div class="head">
+      <div class="holdtitel">
+        <p class="bread-bold">
+          {holdtitel}
+        </p>
+      </div>
+      <div
+        class="holdfarve"
+        data-variant={holdfarve}
+      >
+        {
+          styrkekondition == true && (
+            <div class="styrkekondition" />
+          )
+        }
+        {
+          power == true && (
+            <div class="power" />
+          )
+        }
+
+        {
+          dansehold == true && (
+            <div class="dansehold" />
+          )
+        }
+        {
+          seniorhold == true && (
+            <div class="seniorhold" />
+          )
+        }
+        {
+          bodymind == true && (
+            <div class="bodymind" />
+          )
+        }
+        {
+          specialhold == true && (
+            <div class="specialhold" />
+          )
+        }
+        {
+          spinning == true && (
+            <div class="spinning" />
+          )
+        }
+      </div>
+    </div>
+    <div class="middel">
+      <div class="instruktor">
+        <p class="cardinstructor">
+          {instruktor}
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="cardtime">
+        {time}
+      </p>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    background-color: var(
+      --color-card-bookbg
+    );
+    display: flex;
+    width: 9rem;
+    border-radius: 0px 10px 10px 0px;
+    justify-content: space-between;
+  }
+
+  /* HOLDSTATUR */
+  .status {
+    display: grid;
+  }
+
+  .ledig {
+    background-color: var(
+      --color-status-ledig
+    );
+    width: 1rem;
+  }
+
+  .liste {
+    background-color: var(
+      --color-status-liste
+    );
+    width: 1rem;
+  }
+
+  .fyldt {
+    background-color: var(
+      --color-status-fyldt
+    );
+    width: 1rem;
+  }
+
+  /* CONTENT */
+  .head {
+    display: flex;
+    justify-content: space-between;
+    color: var(
+      --color-footer-background
+    );
+  }
+
+  p {
+    margin: 0%;
+    padding-right: 10px;
+  }
+
+  /* HOLDFARVER */
+  .holdfarve {
+    display: flex;
+    width: 1.5rem;
+  }
+
+  .power {
+    background-color: var(
+      --color-holdfarve-power
+    );
+    height: 1rem;
+    width: 3rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+  .seniorhold {
+    background-color: var(
+      --color-holdfarve-seniorhold
+    );
+    height: 1rem;
+    width: 3rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+  .dansehold {
+    background-color: var(
+      --color-holdfarve-dansehold
+    );
+    height: 1rem;
+    width: 3rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+  .spinning {
+    background-color: var(
+      --color-holdfarve-spinning
+    );
+    height: 1rem;
+    width: 3rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+  .styrkekondition {
+    background-color: var(
+      --color-holdfarve-styrkekondition
+    );
+    height: 1rem;
+    width: 3rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+  .bodymind {
+    background-color: var(
+      --color-holdfarve-bodymind
+    );
+    height: 1rem;
+    width: 3rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+  .specialhold {
+    background-color: var(
+      --color-holdfarve-specialhold
+    );
+    height: 1rem;
+    width: 3rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+</style>

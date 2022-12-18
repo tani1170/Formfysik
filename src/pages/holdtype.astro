@@ -1,0 +1,397 @@
+---
+import Header from "../components/Header.astro";
+import Splash from "../components/Splash.astro";
+import Footer from "../components/Footer.astro";
+import Kategori from "../components/Kategori.astro";
+import "../styles/global.css";
+import Medlembtn from "../components/Medlembtn.astro";
+import Holdcard from "../components/Holdcard.astro";
+
+import Holdkortkategori from "../components/holdkortkategori.astro";
+
+const { skjultehold } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/lhr7bio.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>FormFysik</title>
+  </head>
+  <body class="body-bg">
+    <Header />
+
+    <!-- Information -->
+    <section class="content">
+      <h2>Holdtyper</h2>
+      <h3>Det skal du vide</h3>
+      <div class="info">
+        <p class="bread">
+          Kom i god tid - og gerne 10
+          minutter før holdstart
+        </p>
+        <p class="bread">
+          5 min. før holdstart bliver de
+          ikke-fremødte på holdet taget
+          af, og de som står på
+          ventelisten får en plads i
+          stedet.
+        </p>
+        <p class="bread">
+          Husk at afmelde senest 2 timer
+          før holdstart, hvis du er
+          forhindret i at møde op
+          Manglende fremmøde koster
+          30kr.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filtrering -->
+    <section
+      x-data="{ kategori: 'allekategorier', skjultehold : 0 }"
+      class="holdtyper"
+    >
+      <!-- Knapper -->
+      <div
+        class="holdknap_wrapper"
+        id="kategori"
+        x-model="kategori"
+        x-on:change="$nextTick(() => { ingenhold() });"
+      >
+        <button
+          value="alle"
+          class="holdkategori filtertext"
+        >
+          <div class=""></div>
+          <a href="">Alle</a>
+        </button>
+
+        <!-- Styrke og kondition knap -->
+        <button
+          value="styrke"
+          class="holdkategori filtertext"
+        >
+          <div class="styrkefarve">
+          </div>
+          <a href=""
+            >Styrke & Kondition</a
+          >
+        </button>
+
+        <!-- Power knap -->
+        <button
+          value="power"
+          class="holdkategori filtertext"
+        >
+          <div class="powerfarve"></div>
+          <a href="">Power</a>
+        </button>
+
+        <!-- Body and mind knap -->
+        <button
+          value="bodymind"
+          class="holdkategori filtertext"
+        >
+          <div class="bodymindfarve">
+          </div>
+          <a href="">Body & Mind</a>
+        </button>
+
+        <!-- Spinninghold knap -->
+        <button
+          value="spinning"
+          class="holdkategori filtertext"
+        >
+          <div class="spinningfarve">
+          </div>
+          <a href="">Spinning</a>
+        </button>
+
+        <!-- Dansehold knap -->
+        <button
+          value="dansehold "
+          class="holdkategori filtertext"
+        >
+          <div class="danseholdfarve">
+          </div>
+          <a href="">Dansehold</a>
+        </button>
+
+        <!-- seniorhold knap -->
+        <button
+          value="seniorhold"
+          class="holdkategori filtertext"
+        >
+          <div class="seniorholdfarve">
+          </div>
+          <a href="">Seniorhold</a>
+        </button>
+
+        <!-- Specialhold knap -->
+        <button
+          value="specialhold"
+          class="holdkategori filtertext"
+        >
+          <div class="specialholdfarve">
+          </div>
+          <a href="">Specialhold</a>
+        </button>
+      </div>
+
+      <!-- Tabel -->
+
+      <div class="tabel_wrapper">
+        <!-- Head -->
+
+        <Holdkortkategori
+          holdtitel="yoga"
+          power={true}
+          seniorhold={false}
+          dansehold={true}
+          spinning={false}
+          styrkekondition={false}
+          bodymind={false}
+          specialhold={false}
+        /><Holdkortkategori
+          holdtitel="yoga"
+          power={true}
+          seniorhold={false}
+          dansehold={true}
+          spinning={false}
+          styrkekondition={false}
+          bodymind={false}
+          specialhold={false}
+        /><Holdkortkategori
+          holdtitel="yoga"
+          power={true}
+          seniorhold={false}
+          dansehold={true}
+          spinning={false}
+          styrkekondition={false}
+          bodymind={false}
+          specialhold={false}
+        /><Holdkortkategori
+          holdtitel="yoga"
+          power={true}
+          seniorhold={false}
+          dansehold={true}
+          spinning={false}
+          styrkekondition={false}
+          bodymind={false}
+          specialhold={false}
+        /><Holdkortkategori
+          holdtitel="yoga"
+          power={true}
+          seniorhold={false}
+          dansehold={true}
+          spinning={false}
+          styrkekondition={false}
+          bodymind={false}
+          specialhold={false}
+        /><Holdkortkategori
+          holdtitel="yoga"
+          power={true}
+          seniorhold={false}
+          dansehold={true}
+          spinning={false}
+          styrkekondition={false}
+          bodymind={false}
+          specialhold={false}
+        /><Holdkortkategori
+          holdtitel="yoga"
+          power={true}
+          seniorhold={false}
+          dansehold={true}
+          spinning={false}
+          styrkekondition={false}
+          bodymind={false}
+          specialhold={false}
+        />
+      </div>
+    </section>
+    <Footer />
+  </body>
+
+  <style>
+    .content {
+      padding-left: 10rem;
+      padding-right: 10rem;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+
+    h2 {
+      color: var(--color-bread-text);
+      margin-bottom: 2rem;
+    }
+    h3 {
+      color: var(--color-bread-text);
+      margin-bottom: 1rem;
+    }
+    p {
+      color: var(--color-bread-text);
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    /* -------------------------------- TABEL --------------------------------- */
+
+    .holdtyper {
+      padding-left: 10rem;
+      padding-right: 10rem;
+      max-width: 70rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Head ---- Uge + lokation */
+    .tabelhead {
+      display: flex;
+    }
+
+    .tabel_wrapper {
+      background-color: var(
+        --color-tabel-holdcard
+      );
+      border-radius: 1rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 24px;
+      padding: 2rem;
+    }
+
+    /* HOLD FILTER KNAPPER  */
+    button {
+      background-color: var(
+        --color-footer-background
+      );
+
+      border: none;
+      padding: 0.7rem;
+      color: var(--color-bread-text);
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
+      border-radius: 10px;
+    }
+
+    .holdknap_wrapper {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Holdbooking kort */
+
+    .holdbookingwrapper {
+      display: flex;
+      place-content: center;
+      justify-content: space-evenly;
+
+      background-color: var(
+        --color-tabel-holdcard
+      );
+      padding-bottom: 2rem;
+      padding-top: 1rem;
+      border-radius: 0px 0px 5px 5px;
+    }
+
+    /*----------------------- HOLDFARVER PÅ KNAPKATEGORIER -----------------*/
+
+    .powerfarve {
+      background-color: var(
+        --color-holdfarve-power
+      );
+      height: 1rem;
+      width: 1rem;
+      border-radius: 100%;
+    }
+    .styrkefarve {
+      background-color: var(
+        --color-holdfarve-styrkekondition
+      );
+      height: 1rem;
+      width: 1rem;
+      border-radius: 100%;
+    }
+    .bodymindfarve {
+      background-color: var(
+        --color-holdfarve-bodymind
+      );
+      height: 1rem;
+      width: 1rem;
+      border-radius: 100%;
+    }
+    .spinningfarve {
+      background-color: var(
+        --color-holdfarve-spinninghold
+      );
+      height: 1rem;
+      width: 1rem;
+      border-radius: 100%;
+    }
+    .danseholdfarve {
+      background-color: var(
+        --color-holdfarve-dansehold
+      );
+      height: 1rem;
+      width: 1rem;
+      border-radius: 100%;
+    }
+    .seniorholdfarve {
+      background-color: var(
+        --color-holdfarve-seniorhold
+      );
+      height: 1rem;
+      width: 1rem;
+      border-radius: 100%;
+    }
+
+    .specialholdfarve {
+      background-color: var(
+        --color-holdfarve-specialhold
+      );
+      height: 1rem;
+      width: 1rem;
+      border-radius: 100%;
+    }
+  </style>
+
+  <!-- <script>
+    function ingenhold() {
+      const skjultehold =
+        document.querySelectorAll(
+          ".holdkort.hidden"
+        ).length;
+      if (skjultehold === 7) {
+        document
+          .querySelector("#ingenhold")
+          .classList.remove("hidden");
+      } else {
+        document
+          .querySelector("#ingenhold")
+          .classList.add("hidden");
+      }
+    }
+  </script> -->
+</html>

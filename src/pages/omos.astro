@@ -1,0 +1,75 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Medlembtn from "../components/Medlembtn.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/lhr7bio.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>FormFysik</title>
+  </head>
+  <body class="body-bg">
+    <Header />
+    <section class="splash">
+      <div class="wrapper">
+        <div class="content">
+          <h2>MØD TEAMET</h2>
+          <p>
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit,
+            sed do eiusmod tempor
+            incididunt ut labore et
+            dolore magna aliqua. Ut enim
+            ad minim veniam, quis
+            nostrud exercitation ullamco
+            laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+          <!-- <Medlembtn /> -->
+        </div>
+        <div class="medarbejder">
+          <div class="farve"></div>
+          <div class="farve"></div>
+          <div class="farve"></div>
+          <div class="farve"></div>
+        </div>
+      </div>
+    </section>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .medarbejder {
+    display: flex;
+    gap: 2rem;
+  }
+  .farve {
+    width: 10rem;
+    height: 4rem;
+    background-color: brown;
+  }
+</style>

@@ -58,43 +58,109 @@ import LokationSektion from "../components/lokation_sektion.astro";
             />
           </div>
         </div>
+
+        <!-- Åbningstider -->
         <div class="open">
-          <h4></h4>
+          <h4>Åbningstider</h4>
+          <!-- Træningscenter -->
+          <div class="open_content">
+            <h3>Træningscenter</h3>
+            <p class="bread-bold">
+              Man- til torsdag: <span
+                class="bread"
+                >kl 6:30 til 22:00</span
+              >
+            </p>
+            <p class="bread-bold">
+              Fredag: <span
+                class="bread"
+                >kl 6:30 til 21:00</span
+              >
+            </p>
+            <p class="bread-bold">
+              Lør- til søndag: <span
+                class="bread"
+                >kl 8:00 til 22:00</span
+              >
+            </p>
+          </div>
+          <!-- Klinikken -->
+          <div class="open_content">
+            <h3>Klinikken</h3>
+            <p class="bread-bold">
+              Man- til torsdag: <span
+                class="bread"
+                >kl 7:30 til 18:00</span
+              >
+            </p>
+            <p class="bread-bold">
+              Fredag: <span
+                class="bread"
+                >kl 7:30 til 16:00</span
+              >
+            </p>
+            <p class="bread-bold">
+              Lør- til søndag: <span
+                class="bread"
+                >Lukket</span
+              >
+            </p>
+          </div>
         </div>
       </div>
-      <Footer />
     </section>
+    <Footer />
   </body>
-
-  <style>
-    .kontakt {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .content_wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-    }
-
-    .open {
-      width: 25rem;
-      height: 30rem;
-      background-color: var(
-        --color-tabel-holdcard
-      );
-      border-radius: 10px;
-    }
-
-    section {
-      margin-top: 5rem;
-      margin-bottom: 5rem;
-    }
-    h2 {
-      margin: 0;
-      padding-bottom: 1.5rem;
-    }
-  </style>
 </html>
+<style>
+  body {
+  }
+  .kontakt {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .content_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .open {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(
+      --color-tabel-holdcard
+    );
+    gap: 2.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    color: var(--color-bread-text);
+  }
+
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+  .open_content {
+    display: grid;
+    gap: 1rem;
+  }
+
+  section {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
+  }
+  h2 {
+    margin: 0;
+    padding-bottom: 1.5rem;
+  }
+</style>

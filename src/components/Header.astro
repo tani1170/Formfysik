@@ -1,5 +1,5 @@
 ---
-import Medlembtn from "../components/Medlembtn.astro";
+import Pribtn from "./Pribtn.astro";
 import "../styles/global.css";
 ---
 
@@ -43,16 +43,14 @@ import "../styles/global.css";
             >
           </li>
           <li>
-            <a href="/hjemmetraening"
+            <a href="/hjemmevideo"
               >Hjemmetræning</a
             >
           </li>
         </ul>
       </li>
       <li class="navigation">
-        <a href="/test"
-          >FYSIOTERAPEAUT</a
-        >
+        <a href="">FYSIOTERAPI</a>
       </li>
       <li class="navigation">
         <a href="/omos">OM OS</a>
@@ -75,12 +73,14 @@ import "../styles/global.css";
         </ul>
       </li>
       <li class="medlemburger">
-        <Medlembtn />
+        <Pribtn content="BLIV MEDLEM" />
       </li>
     </ul>
   </nav>
   <div class="medlemdefault">
-    <Medlembtn />
+    <a href="/blivmedlem">
+      <Pribtn content="BLIV MEDLEM" />
+    </a>
   </div>
 </header>
 

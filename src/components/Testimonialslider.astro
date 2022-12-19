@@ -1,0 +1,195 @@
+---
+import "../styles/global.css";
+import Testimonialcard from "./Testimonialcard.astro";
+---
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slides">
+      <div id="slides__1" class="slide">
+        <Testimonialcard
+          navn="Rikke Olander"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+        <Testimonialcard
+          navn="Isabella Cloone"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+        <Testimonialcard
+          navn="Sander Østergaard"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+
+        <a
+          class="slide__next"
+          href="#slides__2"
+          title="Next"></a>
+      </div>
+      <div id="slides__2" class="slide">
+        <Testimonialcard
+          navn="Rikke Olander"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+        <Testimonialcard
+          navn="Isabella Cloone"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+        <Testimonialcard
+          navn="Sander Østergaard"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+        <a
+          class="slide__prev"
+          href="#slides__1"
+          title="Prev"></a>
+        <a
+          class="slide__next"
+          href="#slides__3"
+          title="Next"></a>
+      </div>
+      <div id="slides__3" class="slide">
+        <Testimonialcard
+          navn="Rikke Olander"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+        <Testimonialcard
+          navn="Isabella Cloone"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+        <Testimonialcard
+          navn="Sander Østergaard"
+          anmeldelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        />
+        <a
+          class="slide__prev"
+          href="#slides__2"
+          title="Prev"></a>
+      </div>
+    </div>
+    <div class="slider__nav">
+      <a
+        class="slider__navlink"
+        href="#slides__1"></a>
+      <a
+        class="slider__navlink"
+        href="#slides__2"></a>
+      <a
+        class="slider__navlink"
+        href="#slides__3"></a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .slider-container {
+    display: flex;
+    align-items: baseline;
+    background-color: var(
+      --color-tabel-background
+    );
+    margin-top: 3rem;
+  }
+
+  .slider {
+    width: 100%;
+    padding: 5rem;
+    border-radius: 20px;
+
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slides {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    gap: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    transform-origin: center center;
+    transform: scale(1);
+  }
+
+  .slide__text {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+  .slide a {
+    background: none;
+    border: none;
+  }
+
+  a.slide__prev,
+  .slider::before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+  }
+
+  a.slide__next,
+  .slider::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+  }
+
+  .slider::before,
+  .slider::after,
+  .slide__prev,
+  .slide__next {
+    position: absolute;
+    top: 48%;
+    width: 35px;
+    height: 35px;
+    border: solid
+      var(--color-tabel-text);
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+
+  .slider::before,
+  .slider::after {
+    content: "";
+    z-index: 1;
+    background: none;
+    pointer-events: none;
+  }
+
+  .slider__nav {
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .slider__navlink {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(
+      --color-tabel-text
+    );
+    margin: 0 10px 0 10px;
+  }
+
+  .slider__navlink:hover {
+    background-color: var(
+      --color-info-boxtwo
+    );
+  }
+</style>

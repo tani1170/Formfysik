@@ -1,0 +1,179 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Btnsek from "../components/Btnsek.astro";
+const {} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/lhr7bio.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>FormFysik</title>
+  </head>
+  <body class="body-bg">
+    <Header />
+    <section class="medlem">
+      <div class="medlem_wrapper">
+        <div class="content">
+          <h2>
+            Bliv medlem af FormFysik
+          </h2>
+          <h3>
+            Få første måned gratis
+          </h3>
+          <p class="bread">
+            I form fysisk er der altid
+            god plads og høj hygiejne,
+            vi spiller afdæmpet musik,
+            så der er plads til alle.
+          </p>
+        </div>
+        <div class="pris_container">
+          <div class="pris_header">
+            <p class="bread">
+              Bliv en del af Form Fysik
+              for kun
+            </p>
+            <div class="pris_wrapper">
+              <h1>319</h1>
+              <p class="bread">
+                DKK pr/md
+              </p>
+            </div>
+            <hr />
+          </div>
+          <ul>
+            <li class="bread">
+              Træn frit i vores 3 centre
+            </li>
+            <li class="bread">
+              Altid bemandet med
+              veluddannet  personale
+            </li>
+            <li class="bread">
+              Gratis personlig
+              programlægning  og
+              opfølgning
+            </li>
+            <li class="bread">
+              Altid fri holdtræning på
+              over 75 hold
+            </li>
+            <li class="bread">
+              Gratis kropsscanning
+            </li>
+            <li class="bread">
+              Gratis parkering
+            </li>
+          </ul>
+          <div class="btn">
+            <a href="/kob"
+              ><Btnsek
+                content="Bliv medlem nu"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="img_wrapper">
+        <img
+          src="public/img/lokation_1.webp"
+          alt=""
+        /><img
+          src="public/img/lokation_2.webp"
+          alt=""
+        /><img
+          src="public/img/lokation_3.webp"
+          alt=""
+        />
+      </div>
+    </section>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .img_wrapper {
+    display: flex;
+    object-fit: contain;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .medlem_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 10rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-bottom: 5rem;
+  }
+
+  .content {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .pris_container {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    gap: 1rem;
+    background-color: var(
+      --color-tabel-text
+    );
+    place-self: center;
+    max-width: 20rem;
+    border-radius: 10px;
+    padding: 4rem;
+  }
+  /* STYLING */
+  .btn {
+    display: flex;
+
+    place-content: center;
+  }
+  li {
+    padding-bottom: 0.5rem;
+  }
+  hr {
+    color: var(--color-bread-text);
+    width: ;
+  }
+  .pris_wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    margin: 0;
+    color: var(--color-footer-text);
+  }
+</style>

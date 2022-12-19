@@ -55,10 +55,13 @@
 
   /* btn colors */
   --color-btn-hover: #a7e1d8;
+  --color-step-bg: #a7e1d8;
+
+  /* card titel bg */
 
   /* Aliasser */
+  --color-titel-bg: #405e5b61;
 }
-
 body {
   margin: 0;
   background: rgb(77, 108, 100);
@@ -128,7 +131,11 @@ h4 {
   color: var(--color-bread-text);
 }
 
-.bread {
+.bread,
+label,
+::placeholder,
+input,
+select {
   font-family: kanit, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -140,6 +147,22 @@ h4 {
   font-weight: 500;
   font-style: normal;
   font-size: 17px;
+  margin: 0;
+}
+
+.guide-bold {
+  font-family: kanit, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  margin: 0;
+}
+
+.accept {
+  font-family: kanit, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   margin: 0;
 }
 
@@ -171,6 +194,14 @@ h4 {
   text-decoration: underline;
   font-size: 17px;
   color: var(--color-footer-text);
+}
+
+.stepbystep {
+  font-family: co-headline, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  color: var(--color-footer-background);
 }
 
 a {

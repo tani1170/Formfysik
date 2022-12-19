@@ -1,0 +1,377 @@
+---
+import "../styles/global.css";
+import Pribtn from "./Pribtn.astro";
+---
+
+<section>
+  <div class="inputform">
+    <form action="">
+      <h2>Persondata</h2>
+      <div class="navn">
+        <div class="fornavn">
+          <!-- fornavn -->
+          <label for="fornavn"
+            >Fornavn</label
+          >
+          <input
+            type="text"
+            name=""
+            id="fornavn"
+            placeholder="Rikke"
+          />
+        </div>
+        <div class="efternavn">
+          <!-- efternavn -->
+          <label for="efternavn"
+            >Efternavn</label
+          >
+          <input
+            type="text"
+            name=""
+            id="efternavn"
+            placeholder="Knudsen"
+          />
+        </div>
+      </div>
+
+      <!-- fødselsdag -->
+      <div class="birthday">
+        <!-- måned -->
+        <label for="birhday"
+          >Fødselsdag</label
+        >
+        <div class="birthday_wrapper">
+          <!-- måned -->
+          <div class="month">
+            <select
+              id="birthday"
+              name="birthday"
+            >
+              <option value="januar"
+                >Januar</option
+              >
+
+              <option value="februar"
+                >Februar</option
+              >
+              <option value="marts"
+                >Marts</option
+              >
+              <option value="april"
+                >April</option
+              >
+              <option value="maj"
+                >Maj</option
+              >
+              <option value="juni"
+                >Juni</option
+              >
+              <option value="Juli"
+                >Juli</option
+              >
+              <option value="august"
+                >August</option
+              >
+              <option value="september"
+                >September</option
+              >
+              <option value="oktober"
+                >Oktober</option
+              >
+              <option value="november"
+                >Nobember</option
+              >
+              <option value="December"
+                >December</option
+              >
+            </select>
+          </div>
+
+          <!-- dag -->
+          <div class="day">
+            <input
+              type="number"
+              id="birthday"
+              name="birthday"
+              min="1"
+              max="31"
+              size="12"
+            />
+          </div>
+
+          <div class="year">
+            <!-- år -->
+            <input
+              type="number"
+              id="birthday"
+              name="birthday"
+              min="1960"
+              max="2022"
+              size="12"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- køn -->
+      <div class="gender">
+        <label for="gender">Køn</label>
+        <select
+          id="gender"
+          name="gender"
+        >
+          <option value="kvinde"
+            >Kvinde</option
+          >
+
+          <option value="Mand"
+            >Mand</option
+          >
+          <option value="Andet"
+            >Andet</option
+          >
+          <option value="ikkeoplyst"
+            >Ønsker ikke at oplyse</option
+          >
+        </select>
+      </div>
+
+      <div class="adresse">
+        <div class="vej">
+          <!-- adresse -->
+          <label for="adresse"
+            >Adresse</label
+          >
+          <input
+            type="text"
+            name=""
+            id="adresse"
+            placeholder="minvej 12 3.th"
+          />
+        </div>
+        <div class="postnr">
+          <label for="postnr"
+            >Postnr</label
+          >
+          <input
+            type="text"
+            name=""
+            id="postnr"
+            placeholder="1234"
+          />
+        </div>
+      </div>
+
+      <!-- email -->
+      <div class="email">
+        <label for="email"
+          >E-mail adresse</label
+        >
+        <input
+          type="email"
+          id="email"
+          size="30"
+          required
+        />
+      </div>
+      <!-- adgangskode -->
+      <div class="adgangskode">
+        <div class="pass1">
+          <label for="pass"
+            >Adgangskode</label
+          >
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+        </div>
+        <div class="pass2">
+          <label for="pass"
+            >Gentag adgangskode</label
+          >
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- checkbox -->
+      <div class="checkbox">
+        <input
+          type="checkbox"
+          id="accept"
+          name="accept"
+          value="medlemhandelsbetigenlse"
+        />
+        <label
+          class="accept"
+          for="accept"
+        >
+          Jeg har læst og accepterer
+          medlems- og
+          handelsbettingelserne</label
+        >
+      </div>
+    </form>
+    <!-- <div>
+      <Pribtn
+        content="Gem og fortsæt"
+      />
+    </div> -->
+  </div>
+
+  <div class="pris_wrapper">
+    <div class="prisoversigt">
+      <div class="info">
+        <h3>Medlemsskab</h3>
+        <div class="startdato">
+          <p class="bread">
+            Startdato:
+          </p>
+          <p class="filtertext" id="p1">
+          </p>
+        </div>
+        <p class="bread">
+          Vi er glade for at fortælle,
+          at du får første måned <span
+            class="bread-bold"
+            >ganske gratis</span
+          > - herefter koster det 319 kr
+          pr/måneden
+        </p>
+      </div>
+      <div class="pris">
+        <p class="bread">Pris</p>
+        <h3>0 kr</h3>
+      </div>
+    </div>
+    <div class="btn">
+      <Pribtn
+        content="Gem og fortsæt"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    place-content: center;
+    gap: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .pris_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn {
+    display: grid;
+  }
+  .inputform {
+    display: flex;
+    flex-direction: column;
+    place-items: end;
+    gap: 1rem;
+  }
+  .startdato {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+  }
+  .pris {
+    display: flex;
+    place-content: center;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .prisoversigt {
+    background-color: var(
+      --color-tabel-text
+    );
+    border-radius: 10px;
+    color: var(--color-bread-text);
+    padding: 2rem;
+    width: 20rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem;
+    background-color: var(
+      --color-tabel-text
+    );
+    border-radius: 10px;
+    color: var(--color-bread-text);
+  }
+  .birthday,
+  .gender,
+  .fornavn,
+  .efternavn,
+  .vej,
+  .postnr,
+  .email,
+  .pass1,
+  .pass2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .adresse,
+  .adgangskode,
+  .navn,
+  .birthday_wrapper {
+    display: flex;
+    gap: 2rem;
+  }
+
+  h2,
+  h3,
+  label,
+  select,
+  p {
+    margin: 0;
+  }
+
+  input,
+  select {
+    border-radius: 5px;
+    padding: 0.3rem;
+    border-color: var(
+      --color-info-boxthree
+    );
+  }
+</style>
+
+<script>
+  var date = new Date();
+  var current_date =
+    date.getFullYear() +
+    "-" +
+    (date.getMonth() + 1) +
+    "-" +
+    date.getDate();
+  document.getElementById(
+    "p1"
+  ).innerHTML = current_date;
+</script>

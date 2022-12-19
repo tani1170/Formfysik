@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+---
+
+<section
+  class="personlig_instruktor_section"
+>
+  <img
+    src="public/img/fys_6.webp"
+    alt=""
+  />
+  <div
+    class="personlig_instruktor_tekst"
+  >
+    <h4>Jacob Møller-Jensen</h4>
+    <p class="bread">
+      Med personlig træning hos mig
+      lærer du at skabe positive
+      tilstande for dig selv og få
+      motivation til at blive stærkere
+      og klogere på egen krop, når det
+      gælder træning og bevægelse. Mit
+      ypperste mål for dig er
+      selvledelse og at gøre dig
+      fuldstændig uafhængig af mig. Med
+      den rette programlægning,
+      restitutionsstrategi (søvn, væske,
+      kost, stress m.m.) og dine ønsker
+      i centrum, vil vi i samarbejde nå
+      frem til dette.
+    </p>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(
+      --color-tabel-text
+    );
+    display: flex;
+    place-content: center;
+  }
+  .personlig_instruktor_section img {
+    rotate: -3deg;
+    border-radius: 10px;
+    max-height: 25rem;
+    max-width: 100%;
+  }
+
+  p {
+    color: var(--color-footer-text);
+  }
+  .personlig_instruktor_tekst {
+    width: 35rem;
+  }
+
+  @media (min-width: 750px) {
+    .personlig_instruktor_section {
+      display: flex;
+      padding: 60px 230px 90px 230px;
+      gap: 90px;
+    }
+  }
+</style>

@@ -2,7 +2,10 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Medlembtn from "../components/Medlembtn.astro";
+import Btnsek from "../components/Btnsek.astro";
+import Faq from "../components/Faq.astro";
+import Fysioterapeutslider from "../components/Fysioterapeutslider.astro";
+import Teamscroll from "../components/Teamscroll.astro";
 ---
 
 <html lang="en">
@@ -30,46 +33,59 @@ import Medlembtn from "../components/Medlembtn.astro";
   <body class="body-bg">
     <Header />
     <section class="splash">
-      <div class="wrapper">
-        <div class="content">
-          <h2>MØD TEAMET</h2>
-          <p>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit,
-            sed do eiusmod tempor
-            incididunt ut labore et
-            dolore magna aliqua. Ut enim
-            ad minim veniam, quis
-            nostrud exercitation ullamco
-            laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-          <!-- <Medlembtn /> -->
-        </div>
-        <div class="medarbejder">
-          <div class="farve"></div>
-          <div class="farve"></div>
-          <div class="farve"></div>
-          <div class="farve"></div>
-        </div>
+      <div class="content">
+        <h1>MØD TEAMET</h1>
+        <h3>
+          Lad os hjælpe dig med en mere
+          effektiv træning. <br /> Vi er
+          et dynamisk team, som er specialister
+          i at undersøge og behandle ryg-
+          og nakkeproblemer samt genoptræning
+          af idrætsskader. <br /> Vi er her
+          for at hjælpe dig - professinelt
+          og med et fagligt højt niveau.
+        </h3>
+
+        <a href="#fysioterapeuter">
+          <Btnsek
+            content="Se fysioterapeuter"
+          />
+        </a>
       </div>
+
+      <Teamscroll />
     </section>
+
+    <!-- FYSIOTERAPEUTER -->
+    <section id="fysioterapeuter">
+      <Fysioterapeutslider />
+    </section>
+    <div id="faq">
+      <Faq />
+    </div>
     <Footer />
   </body>
 </html>
 
 <style>
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .medarbejder {
+  .splash {
     display: flex;
-    gap: 2rem;
   }
-  .farve {
-    width: 10rem;
-    height: 4rem;
-    background-color: brown;
+
+  .content {
+    width: 45rem;
+    padding-left: 7rem;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+    color: var(--color-bread-text);
+  }
+
+  .splash img {
+    position: absolute;
+    /* width: 50rem; */
+
+    top: 15%;
+    left: 43.8%;
+    z-index: -1;
   }
 </style>

@@ -1,0 +1,37 @@
+---
+import "../styles/global.css";
+
+const { content } = Astro.props;
+---
+
+<button id="secondary-btn" class="slide"
+  ><p class="font-btn">{content}</p>
+</button>
+
+<style>
+  #secondary-btn {
+    background: none;
+    border: 3px solid
+      var(--color-off-white);
+    border-radius: 10px;
+    margin: 0.5em;
+    padding: 12px 40px;
+    transition: ease-out 0.3s;
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-footer-text);
+  }
+
+  p:hover {
+    color: var(--color-tabel-text);
+  }
+
+  #secondary-btn:hover {
+    box-shadow: inset 310px 0 0 0
+      var(--color-off-white);
+    cursor: pointer;
+    color: var(--color-tabel-text);
+  }
+</style>

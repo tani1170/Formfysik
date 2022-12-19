@@ -4,7 +4,8 @@ import Splash from "../components/Splash.astro";
 import Footer from "../components/Footer.astro";
 import Kategori from "../components/Kategori.astro";
 import "../styles/global.css";
-import Medlembtn from "../components/Medlembtn.astro";
+import Stepbystepland from "../components/Stepbystepland.astro";
+import Cookiebox from "../components/Cookiebox.astro";
 ---
 
 <html lang="en">
@@ -32,6 +33,8 @@ import Medlembtn from "../components/Medlembtn.astro";
   <body class="body-bg">
     <Header />
     <Splash />
+
+    <Cookiebox />
     <div class="values">
       <!-- Første boks -->
       <div class="infovalues info1">
@@ -68,28 +71,29 @@ import Medlembtn from "../components/Medlembtn.astro";
     </div>
     <section class="kategorier">
       <Kategori
-        holdtitel="yoga"
-        holdfarve=""
-        power={true}
-        seniorhold={false}
-        dansehold={false}
-        spinning={false}
-        styrkekondition={false}
-        bodymind={false}
-        specialhold={false}
+        titel="holdtyper"
+        beskrivelse="Vi har samlet 75 hold et sted, se hvilke hold som bedst passer til dig."
+        src="public/img/Dance1.png"
       />
-      <Kategori />
+      <Kategori
+        titel="Personlig træning"
+        beskrivelse="Vi ved at det kan være svært at komme igang, derfor har vi et hold af professionelle trænere, som står klar til at sætte dig igang med en træningsplad "
+        src="public/img/Senior1.png"
+      />
     </section>
 
-    <section class="stepbystep">
-    </section>
+    <Stepbystepland
+      step1="Klik Bliv medlem"
+      step2="Udfyld dine oplysninger"
+      step3="Træn frit i alle vores centre"
+    />
     <Footer />
   </body>
 
   <style>
     /* INFOGRAFIK */
+
     .values {
-      display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
     .infovalues {
@@ -140,7 +144,19 @@ import Medlembtn from "../components/Medlembtn.astro";
         --color-off-white
       );
       display: flex;
+      flex-direction: column;
       justify-content: space-evenly;
+    }
+
+    @media (min-width: 900px) {
+      .values {
+        display: grid;
+      }
+
+      .kategorier {
+        display: flex;
+        flex-direction: row;
+      }
     }
   </style>
 </html>

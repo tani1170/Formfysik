@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 
+import Btnsek from "./Btnsek.astro";
+
 const { splashbillede } = Astro.props;
 ---
 
@@ -14,6 +16,10 @@ const { splashbillede } = Astro.props;
       />
       Første måned gratis og programlægning!
     </h3>
+
+    <a href="/holdbooking">
+      <Btnsek content="Se holdplan" />
+    </a>
   </div>
 
   <img
@@ -27,12 +33,13 @@ const { splashbillede } = Astro.props;
   section {
     display: block;
     overflow: hidden;
+    height: 83vh;
   }
 
   .content {
     width: 45rem;
     padding-left: 7rem;
-    padding-top: 7rem;
+    margin-top: 13rem;
     padding-bottom: 6rem;
     color: var(--color-bread-text);
   }
@@ -40,8 +47,8 @@ const { splashbillede } = Astro.props;
   img {
     position: absolute;
     width: 50rem;
-    top: 20%;
-    left: 43.8%;
+    top: 25%;
+    right: 0;
     z-index: -1;
   }
 </style>

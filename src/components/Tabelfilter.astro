@@ -1,10 +1,9 @@
 ---
 import "../styles/global.css";
+import Holdcard from "./Holdcard.astro";
 import Ugedage from "./Ugedage.astro";
 import Ugefilter from "./Ugefilter.astro";
-import Holdcard from "./Holdcard.astro";
 import Farvekode from "./Farvekode.astro";
-import { AstroComponent } from "astro/dist/runtime/server/render/astro";
 
 const { filterObjects, name } =
   Astro.props;
@@ -93,7 +92,7 @@ const { filterObjects, name } =
   <!-- TABEL -->
   <div class="tabel_wrapper">
     <!-- UGE + LOKATION -->
-    <!-- <div class="tabel_head">
+    <div class="tabel_head">
       <div class="uge">
         <Ugefilter ugenr="46" />
       </div>
@@ -115,8 +114,7 @@ const { filterObjects, name } =
           Østerbro</button
         >
       </div>
-
-    </div> -->
+    </div>
 
     <!-- TABEL DAGE  + kort-->
     <div class="tabel_mid">
@@ -714,12 +712,12 @@ const { filterObjects, name } =
 <!------------------------------ STYLES ------------------------------>
 <style>
   section {
-    margin-top: 22rem;
-    margin-bottom: 10rem;
-    margin-left: 12rem;
-    margin-right: 12rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
     gap: 2rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
 
   /* --------------- HOLDKATEGORI KNAPPER ---------------- */
@@ -743,12 +741,17 @@ const { filterObjects, name } =
     cursor: pointer;
   }
 
-  .show {
+  button:hover {
+    background-color: var(
+      --color-tabel-holdcard
+    );
+  }
+  /* .show {
     display: block;
   }
   .kort {
     display: none;
-  }
+  } */
 
   /* ------------- tabel wrapper -------------- */
   .tabel_wrapper {
@@ -789,8 +792,10 @@ const { filterObjects, name } =
     background-color: var(
       --color-tabel-holdcard
     );
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 10px 10px 0px 0px;
   }
 
   .bookingkort {
@@ -873,7 +878,7 @@ const { filterObjects, name } =
 </style>
 
 <!-- ------------------- JAVESCRIPT ----------------- -->
-<script>
+<script is:inline>
   function filterObjects(c) {
     var x, i;
     x =

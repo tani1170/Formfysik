@@ -4,121 +4,173 @@ import "../styles/global.css";
 
 <section>
   <!-- ÅBNINGSTIDER -->
-
-  <div class="tider">
-    <p class="footer">Åbningstider</p>
-    <p class="bread-bold">
-      Træningscentre
-    </p>
-    <p class="bread">
-      Mandag - Torsdag kl. 6:30 til
-      22:00 <br /> Fredag kl. 6:30 til 20:00<br
-      />
-      Lørdag: kl. 8:00 til 18:00<br /> Søndag
-      kl. 8:00 til 19:00
-    </p>
-    <p class="link">
-      Se åbningstider i julen
-    </p>
-  </div>
-
-  <!-- KONTAKT -->
-  <div class="kontakt">
-    <p class="footer">Kontakt</p>
-    <div>
-      <!-- Vesterbro -->
+  <div class="content">
+    <div class="tider">
+      <p class="footer">Åbningstider</p>
       <p class="bread-bold">
-        Form Fysisk Vesterbro
+        Træningscentre
       </p>
       <p class="bread">
-        Vesterbrogade 95A 1620 København
-        V <br /> E-mail: <a
-          href="info@formvesterbro"
-          >info@formvesterbro</a
-        >
-        <br /> Telefon: <a
-          href="tel:+ 3331 2220"
-        >
-          3331 2220</a
-        >
+        Mandag - Torsdag kl. 6:30 til
+        22:00 <br /> Fredag kl. 6:30 til
+        20:00<br />
+        Lørdag: kl. 8:00 til 18:00<br />
+        Søndag kl. 8:00 til 19:00
+      </p>
+      <p class="link">
+        Se åbningstider i julen
       </p>
     </div>
-    <!-- amagerbro -->
-    <div>
-      <p class="bread-bold">
-        Form Fysisk Amagerbro
-      </p>
-      <p class="bread">
-        Amager Strandvej 56 2300
-        københavn S <br /> E-mail: <a
-          href="info@formamagerbro"
-          >info@formamagerbro</a
-        >
-        <br /> Telefon: <a
-          href="tel:+ 3331 2220"
-        >
-          3331 2220</a
-        >
-      </p>
+
+    <!-- KONTAKT -->
+    <div class="kontakt">
+      <p class="footer">Kontakt</p>
+      <div>
+        <!-- Vesterbro -->
+        <div>
+          <p class="bread-bold">
+            Form Fysisk Vesterbro
+          </p>
+          <p class="bread">
+            Vesterbrogade 95A 1620
+            København V <br /> E-mail: <a
+              href="info@formvesterbro"
+              >info@formvesterbro</a
+            >
+            <br /> Telefon: <a
+              href="tel:+ 3331 2220"
+            >
+              3331 2220</a
+            >
+          </p>
+        </div>
+      </div>
+      <!-- amagerbro -->
+      <div>
+        <p class="bread-bold">
+          Form Fysisk Amagerbro
+        </p>
+        <p class="bread">
+          Amager Strandvej 56 2300
+          københavn S <br /> E-mail: <a
+            href="info@formamagerbro"
+            >info@formamagerbro</a
+          >
+          <br /> Telefon: <a
+            href="tel:+ 3331 2220"
+          >
+            3331 2220</a
+          >
+        </p>
+      </div>
+      <!-- østerbro -->
+      <div>
+        <p class="bread-bold">
+          Form Fysisk Østerbro
+        </p>
+        <p class="bread">
+          Østerbrogade 37 2100 København
+          Ø S <br /> E-mail: <a
+            href="info@formoesterbrobro"
+            >info@formoesterbro</a
+          >
+          <br />Telefon: <a
+            href="tel:+ 3331 2220"
+          >
+            3331 2220</a
+          >
+        </p>
+      </div>
     </div>
-    <!-- østerbro -->
-    <div>
-      <p class="bread-bold">
-        Form Fysisk Østerbro
-      </p>
-      <p class="bread">
-        Østerbrogade 37 2100 København Ø
-        S <br /> E-mail: <a
-          href="info@formoesterbrobro"
-          >info@formoesterbro</a
-        >
-        <br />Telefon: <a
-          href="tel:+ 3331 2220"
-        >
-          3331 2220</a
-        >
-      </p>
+
+    <!-- HJÆLP -->
+    <div class="help">
+      <p class="footer">Hjælp</p>
+      <a
+        class="bread"
+        href=" /lokationer"
+        >Lokationer</a
+      >
+      <a class="bread" href="/omos"
+        >Hvem er vi</a
+      >
+      <a class="bread" href="/omos#faq "
+        >FAQ</a
+      >
+      <a class="bread" href=""
+        >Privatlivspolitik</a
+      >
+      <a class="bread" href="/sitemap"
+        >sitemap</a
+      >
     </div>
   </div>
-
-  <!-- HJÆLP -->
-  <div class="help">
-    <p class="footer">Hjælp</p>
-    <a class="link" href=" "
-      >Lokationer</a
-    >
-    <a class="link" href=""
-      >Hvem er vi</a
-    >
-    <a class="link" href="">FAQ</a>
-    <a class="link" href=""
-      >Privatlivspolitik</a
-    >
+  <div class="image_wrapper">
+    <img
+      src="public/img/logo.svg"
+      alt=""
+    />
   </div>
 
-  <img
-    src="public/img/logo.svg"
-    alt=""
-  />
+  <div class="illustration">
+    <img
+      src="public/img/Movement1.png"
+      alt=""
+    />
+  </div>
 </section>
 
 <style>
-  section {
+  .content {
     display: flex;
     justify-content: space-evenly;
+    grid-column: 1/3;
+    grid-template-rows: 1/3;
+    height: fit-content;
+    height: 14.5rem;
+    padding-top: 1rem;
+    z-index: 1;
+  }
+  section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     background-color: var(
       --color-footer-background
     );
     color: var(--color-footer-text);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    overflow: hidden;
   }
   .help {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
+
+  .image_wrapper {
+    grid-row: 2;
+    grid-column: 1/3;
+    display: flex;
+    place-content: end;
+    padding-right: 3rem;
+    padding-top: 10rem;
+    height: fit-content;
+  }
   img {
     height: 4rem;
+  }
+
+  .illustration {
+    padding-top: 10rem;
 
     position: absolute;
+    overflow: hidden;
+    left: -15rem;
+    bottom: end;
+  }
+  .illustration img {
+    rotate: 250deg;
+    height: 22.5rem;
   }
 </style>

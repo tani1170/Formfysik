@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+import Btnsek from "./Btnsek.astro";
+
+const {
+  sessioner,
+  pris,
+  fordel1,
+  fordel2,
+  fordel3,
+  fordel4,
+} = Astro.props;
+---
+
+<div class="pris_container">
+  <div class="pris_header">
+    <p class="bread">{sessioner}</p>
+    <div class="pris_wrapper">
+      <h1>{pris}</h1>
+      <p class="bread">DKK</p>
+    </div>
+    <hr />
+  </div>
+
+  <!-- MANGLER DIVIDER -->
+  <ul>
+    <li class="bread">{fordel1}</li>
+    <li class="bread">{fordel2}</li>
+    <li class="bread">{fordel3}</li>
+    <li class="bread">{fordel4}</li>
+  </ul>
+  <div class="btn">
+    <Btnsek content="Book nu" />
+  </div>
+</div>
+
+<style>
+  /* margin-top skal slettes */
+  .pris_container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    background-color: var(
+      --color-tabel-text
+    );
+    width: 15rem;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  /* STYLING */
+  .btn {
+    display: flex;
+
+    place-content: center;
+  }
+  li {
+    padding-bottom: 0.5rem;
+  }
+  hr {
+    color: var(--color-bread-text);
+    width: ;
+  }
+  .pris_wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+  h1,
+  p,
+  li {
+    margin: 0;
+    color: var(--color-footer-text);
+  }
+</style>

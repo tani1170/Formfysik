@@ -1,11 +1,7 @@
 ---
 import Header from "../components/Header.astro";
-import Splash from "../components/Splash.astro";
 import Footer from "../components/Footer.astro";
-import Kategori from "../components/Kategori.astro";
 import "../styles/global.css";
-import Medlembtn from "../components/Medlembtn.astro";
-import Holdcard from "../components/Holdcard.astro";
 
 import Holdkortkategori from "../components/holdkortkategori.astro";
 
@@ -160,70 +156,162 @@ const { skjultehold } = Astro.props;
       <div class="tabel_wrapper">
         <!-- Head -->
 
-        <Holdkortkategori
-          holdtitel="yoga"
-          power={true}
-          seniorhold={false}
-          dansehold={true}
-          spinning={false}
-          styrkekondition={false}
-          bodymind={false}
-          specialhold={false}
-        /><Holdkortkategori
-          holdtitel="yoga"
-          power={true}
-          seniorhold={false}
-          dansehold={true}
-          spinning={false}
-          styrkekondition={false}
-          bodymind={false}
-          specialhold={false}
-        /><Holdkortkategori
-          holdtitel="yoga"
-          power={true}
-          seniorhold={false}
-          dansehold={true}
-          spinning={false}
-          styrkekondition={false}
-          bodymind={false}
-          specialhold={false}
-        /><Holdkortkategori
-          holdtitel="yoga"
-          power={true}
-          seniorhold={false}
-          dansehold={true}
-          spinning={false}
-          styrkekondition={false}
-          bodymind={false}
-          specialhold={false}
-        /><Holdkortkategori
-          holdtitel="yoga"
-          power={true}
-          seniorhold={false}
-          dansehold={true}
-          spinning={false}
-          styrkekondition={false}
-          bodymind={false}
-          specialhold={false}
-        /><Holdkortkategori
-          holdtitel="yoga"
-          power={true}
-          seniorhold={false}
-          dansehold={true}
-          spinning={false}
-          styrkekondition={false}
-          bodymind={false}
-          specialhold={false}
-        /><Holdkortkategori
-          holdtitel="yoga"
-          power={true}
-          seniorhold={false}
-          dansehold={true}
-          spinning={false}
-          styrkekondition={false}
-          bodymind={false}
-          specialhold={false}
-        />
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Cross-fit"
+            power={true}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_1.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Fleksibilitet"
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={true}
+            src="public/img/holdtype_2.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Yoga"
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={true}
+            specialhold={false}
+            src="public/img/holdtype_1.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Hot Wheels"
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={true}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_3.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="GLA:D øvet"
+            power={false}
+            seniorhold={true}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_2.webp"
+          />
+        </a>
+        <a href="/singlhold"
+          ><Holdkortkategori
+            holdtitel="Groove Dance"
+            power={false}
+            seniorhold={false}
+            dansehold={true}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_1.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Mix fit"
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={true}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_3.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Senior spinning"
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={true}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_2.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Senoir Dance"
+            power={false}
+            seniorhold={true}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_2.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Mix dance"
+            power={false}
+            seniorhold={false}
+            dansehold={true}
+            spinning={false}
+            styrkekondition={false}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_3.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Puls og Styrke"
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={true}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_1.webp"
+          />
+        </a>
+        <a href="/singlehold"
+          ><Holdkortkategori
+            holdtitel="Stabilitet"
+            power={false}
+            seniorhold={false}
+            dansehold={false}
+            spinning={false}
+            styrkekondition={true}
+            bodymind={false}
+            specialhold={false}
+            src="public/img/holdtype_2.webp"
+          />
+        </a>
       </div>
     </section>
     <Footer />
@@ -231,9 +319,9 @@ const { skjultehold } = Astro.props;
 
   <style>
     .content {
-      padding-left: 10rem;
-      padding-right: 10rem;
-      margin-top: 5rem;
+      padding-left: 15rem;
+      padding-right: 15rem;
+      margin-top: 10rem;
       margin-bottom: 5rem;
     }
 
@@ -256,8 +344,8 @@ const { skjultehold } = Astro.props;
     /* -------------------------------- TABEL --------------------------------- */
 
     .holdtyper {
-      padding-left: 10rem;
-      padding-right: 10rem;
+      padding-left: 15rem;
+      padding-right: 15rem;
       max-width: 70rem;
       margin-bottom: 2rem;
     }
@@ -277,7 +365,7 @@ const { skjultehold } = Astro.props;
       flex-wrap: wrap;
       flex-direction: row;
       gap: 24px;
-      padding: 2rem;
+      padding: 2.5rem;
     }
 
     /* HOLD FILTER KNAPPER  */
@@ -295,6 +383,11 @@ const { skjultehold } = Astro.props;
       border-radius: 10px;
     }
 
+    button:hover {
+      background-color: var(
+        --color-tabel-holdcard
+      );
+    }
     .holdknap_wrapper {
       display: flex;
       gap: 1rem;

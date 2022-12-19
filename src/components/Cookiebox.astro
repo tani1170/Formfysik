@@ -1,0 +1,133 @@
+---
+import "../styles/global.css";
+import Btnsek from "./Btnsek.astro";
+import Pribtn from "./Pribtn.astro";
+---
+
+<div class="cookiebox" id="myDIV">
+  <!-- cookie wrapper -->
+  <div class="cookie_wrapper">
+    <!-- cookie content -->
+    <div class="content">
+      <h3 class="">
+        Vi benytter cookies
+      </h3>
+      <p class="bread">
+        Vores hjemmeside bruger cookies
+        fra FormFysik for at kunne
+        tilbyde dig den bedst mulige
+        oplevelse, f.eks. ved at
+        tilpasse indholdet og vise dig
+        relevante annoncer for vores
+        produkter. Derudover får vi
+        mulighed for at analysere trafik
+        på hjemmesiden, tilbyde
+        funktioner fra vores
+        samarbejdspartnere og dele dine
+        cookies med dem.
+      </p>
+      <!-- cookieknapper -->
+
+      <div class="knapper">
+        <!-- afvis knap -->
+        <div
+          onclick="myFunction()"
+          class="afvis"
+        >
+          <Btnsek
+            class="afvis"
+            content="AFVIS ALLE"
+          />
+        </div>
+        <!-- accepter knap -->
+        <div
+          onclick="myFunction()"
+          class="accepter"
+        >
+          <Pribtn
+            content="ACCEPTER ALLE"
+          />
+        </div>
+      </div>
+
+      <!-- cookie læs mere -->
+      <a href="" class="bread"
+        >Vis detaljer</a
+      >
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookiebox {
+    display: flex;
+    justify-content: center;
+    color: var(--color-bread-text);
+  }
+  .knapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cookie_wrapper {
+    position: fixed;
+    top: 30%;
+    z-index: 10;
+    border-radius: 10px;
+    background-color: var(
+      --color-footer-background
+    );
+    padding: 4rem;
+    align-content: center;
+    width: 40rem;
+  }
+  .content {
+    display: grid;
+    gap: 1rem;
+  }
+
+  a {
+    display: flex;
+    place-self: end;
+  }
+  h3,
+  p {
+    margin: 0;
+  }
+</style>
+<script is:inline>
+  function myFunction() {
+    var x =
+      document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+<!-- 
+<script is:inline>
+  const cookieBox =
+    document.querySelector(
+      ".cookie_wrapper"
+    );
+  const denyCookie =
+    document.querySelector(".afvis");
+  const acceptCookie =
+    document.querySelector(".accepter");
+
+  acceptCookie.addEventListener(
+    "click",
+    fjernCookieboks
+  );
+  denyCookie.addEventListener(
+    "click",
+    fjernCookieboks
+  );
+
+  function fjernCookieboks() {
+    cookieBox.classList.add("hidden");
+  }
+</script> -->

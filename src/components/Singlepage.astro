@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Medlembtn from "./Medlembtn.astro";
+import Btnsek from "./Btnsek.astro";
 
 const {
   titel,
@@ -9,6 +9,7 @@ const {
   info3,
   beskrivelse,
   knap,
+  knaptekst,
 } = Astro.props;
 ---
 
@@ -18,7 +19,7 @@ const {
     <ul class="bread-bold">
       <li>{info1}</li>
       <li>{info2}</li>
-      <li>{info2}</li>
+      <li>{info3}</li>
     </ul>
 
     <div class="img_mobile">
@@ -30,7 +31,11 @@ const {
     <p class="knap bread">
       {beskrivelse}
     </p>
-    {knap == true && <Medlembtn />}
+    {
+      knap == true && (
+        <Btnsek content={knaptekst} />
+      )
+    }
   </div>
   <div class="img_wrapper">
     <img

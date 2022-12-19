@@ -2,7 +2,11 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Testheader from "../components/Testheader.astro";
+import Instruktor from "../components/Instruktor.astro";
+import Btnsek from "../components/Btnsek.astro";
+import Priser from "../components/Priser.astro";
+import Testimonialcard from "../components/Testimonialcard.astro";
+import Testimonialslider from "../components/Testimonialslider.astro";
 ---
 
 <html lang="en">
@@ -28,15 +32,124 @@ import Testheader from "../components/Testheader.astro";
     <title>FormFysik</title>
   </head>
   <body class="">
-    <Testheader />
+    <Header />
 
-    <!-- <Footer /> -->
+    <section class="splash">
+      <div class="content">
+        <h1>
+          NÅ DIT MÅL MED PERSONLIG
+          TRÆNING
+        </h1>
+        <h3>
+          Har du mistet motivationen og
+          savner udvikling i din
+          træning? <br />
+          Vores personlige træner er her
+          for at hjælpe dig
+        </h3>
+        <a href="#priser">
+          <Btnsek content="Se priser" />
+        </a>
+      </div>
+
+      <img
+        src="public/img/splash_landing.svg"
+        alt=""
+      />
+    </section>
+
+    <Instruktor />
+
+    <section class="priser" id="priser">
+      <div class="pris_content">
+        <h2>Simply, easy pricing</h2>
+        <p class="bread">
+          Træn sammen, og spar penge!
+        </p>
+      </div>
+      <div class="pris_wrapper">
+        <Priser
+          sessioner="3 sessioner af 1 time"
+          pris="1050"
+          fordel1="Personligtræning for en"
+          fordel2="Træningsprogram"
+          fordel3="Komplet kropsscanning"
+          fordel4="Faste målsætninger"
+        />
+        <Priser
+          sessioner="5 sessioner af 1 time"
+          pris="1500"
+          fordel1="Personligtræning for end"
+          fordel2="Træningsprogram"
+          fordel3="Komplet kropsscanning"
+          fordel4="Faste målsætninger"
+        />
+        <Priser
+          sessioner="5 sessioner af 1 time"
+          pris="2500"
+          fordel1="Personligtræning for to"
+          fordel2="Træningsprogram"
+          fordel3="Komplet kropsscanning"
+          fordel4="Faste målsætninger"
+        />
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+
+    <Testimonialslider />
+    <Footer />
   </body>
+  <style>
+    body {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .splash {
+      display: block;
+      overflow: hidden;
+    }
+
+    .content {
+      width: 45rem;
+      padding-left: 7rem;
+      padding-top: 10rem;
+      padding-bottom: 6rem;
+      color: var(--color-bread-text);
+    }
+
+    .splash img {
+      position: absolute;
+      /* width: 50rem; */
+
+      top: 20%;
+      left: 43.8%;
+      z-index: -1;
+    }
+    .priser {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .pris_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pris_content p,
+    h2 {
+      margin: 0;
+      color: var(--color-footer-text);
+    }
+    .pris_wrapper {
+      display: flex;
+      place-content: center;
+
+      gap: 2rem;
+    }
+  </style>
 </html>
-<style>
-  body {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-  }
-</style>

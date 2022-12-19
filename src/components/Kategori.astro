@@ -1,19 +1,17 @@
 ---
 import "../styles/global.css";
+const { titel, beskrivelse, src } =
+  Astro.props;
 ---
 
 <div class="card">
   <div class="imagebox">
-    <img src="" alt="" />
+    <img {src} alt="" />
   </div>
   <div class="content">
-    <h3>Holdtyper</h3>
+    <h3>{titel}</h3>
     <p class="bread">
-      Lorem ipsum dolor sit amet
-      consectetur adipisicing elit.
-      Ratione sequi rem fugit modi
-      nesciunt ea cumque nemo id
-      exercitationem.
+      {beskrivelse}
     </p>
   </div>
 </div>
@@ -21,10 +19,10 @@ import "../styles/global.css";
 <style>
   .card {
     display: flex;
-    align-items: center;
+
     gap: 2rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
   .imagebox {
     background-color: aqua;
@@ -36,8 +34,17 @@ import "../styles/global.css";
     );
   }
 
+  img {
+    width: 10rem;
+    top: -25%;
+    position: relative;
+  }
+
   .content {
     width: 17rem;
+    color: var(
+      --color-footer-background
+    );
   }
 
   h1 {

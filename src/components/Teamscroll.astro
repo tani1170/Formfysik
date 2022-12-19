@@ -1,0 +1,136 @@
+---
+import "../styles/global.css";
+---
+
+<div class="img_wrapper">
+  <div class="scroll">
+    <div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_1.webp"
+        alt=""
+      />
+    </div>
+    <div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_2.webp"
+        alt=""
+      />
+    </div>
+    <div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_3.webp"
+        alt=""
+      />
+    </div>
+    <div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_4.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_5.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_6.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_7.webp"
+        alt=""
+      />
+    </div>
+    <div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_8.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_9.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_10.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_11.webp"
+        alt=""
+      />
+    </div>
+    <div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_12.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_13.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_14.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_15.webp"
+        alt=""
+      />
+    </div><div class="medarbejder">
+      <img
+        src="public/img/hvem-er-vi_16.webp"
+        alt=""
+      />
+    </div>
+  </div>
+  <style>
+    .img_wrapper {
+      height: 100vh;
+      max-width: 50rem;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .scroll {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      place-content: center;
+      padding-left: 6rem;
+      padding-right: 6rem;
+      overflow-y: scroll;
+      padding-top: 40rem;
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      scrollbar-width: none; /* Firefox */
+      scroll-behavior: smooth;
+    }
+
+    .medarbejder:nth-of-type(odd) {
+      padding-top: 3rem;
+    }
+    .medarbejder {
+      height: 10rem;
+      width: 7rem;
+      object-fit: contain;
+      overflow: hidden;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+      overflow-x: hidden;
+    }
+  </style>
+</div>

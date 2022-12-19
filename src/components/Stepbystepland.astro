@@ -1,0 +1,85 @@
+---
+import "../styles/global.css";
+
+const { step1, step2, step3 } =
+  Astro.props;
+---
+
+<div class="stepper-wrapper">
+  <div class="stepper-item completed">
+    <div class="step-counter">
+      <h1>1</h1>
+    </div>
+    <div class="navigation step-name">
+      {step1}
+    </div>
+  </div>
+  <div class="stepper-item completed">
+    <div class="step-counter">
+      <h1>2</h1>
+    </div>
+    <div class="navigation step-name">
+      {step2}
+    </div>
+  </div>
+  <div class="stepper-item active">
+    <div class="step-counter">
+      <h1>3</h1>
+    </div>
+    <div class="navigation step-name">
+      {step3}
+    </div>
+  </div>
+</div>
+
+<style>
+  .stepper-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+  .stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .stepper-item::after {
+    position: absolute;
+    content: "";
+    background: var(--color-step-bg);
+    left: 50%;
+    z-index: 2;
+    height: 0.4rem;
+  }
+
+  .stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-tabel-text);
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--color-step-bg);
+  }
+
+  .stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    background: var(--color-step-bg);
+    width: 100%;
+    top: 35%;
+    left: 50%;
+    z-index: 3;
+  }
+</style>

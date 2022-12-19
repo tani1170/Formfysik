@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+const { navn, anmeldelse } =
+  Astro.props;
+---
+
+<article>
+  <h3>{navn}</h3>
+  <p class="bread">{anmeldelse}</p>
+</article>
+
+<style>
+  article {
+    background-color: var(
+      --color-info-boxtwo
+    );
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    padding: 1.5rem;
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+</style>

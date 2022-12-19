@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+const { step, beskrivelse } =
+  Astro.props;
+---
+
+<div class="card_wrapper">
+  <div class="image">
+    <img
+      src="public/img/placeholder.webp"
+      alt=""
+    />
+    <div class="step">
+      <p class="guide-bold">{step}</p>
+    </div>
+  </div>
+  <p class="bread">
+    {beskrivelse}
+  </p>
+</div>
+
+<style>
+  .card_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 30rem;
+    height: fit-content;
+  }
+  image {
+  }
+
+  img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+  }
+  .step {
+    background-color: var(
+      --color-step-bg
+    );
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    position: relative;
+    bottom: 2rem;
+    right: 1rem;
+  }
+
+  p {
+    color: var(--color-tabel-text);
+    margin: 0;
+  }
+</style>

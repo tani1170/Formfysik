@@ -11,6 +11,7 @@ const {
   centerinfo,
   left,
   right,
+  src,
 } = Astro.props;
 ---
 
@@ -52,10 +53,7 @@ const {
             </div>
           </div>
           <div class="image">
-            <img
-              src="public/img/lokation_1.webp"
-              alt=""
-            />
+            <img {src} alt="" />
           </div>
         </div>
       </>
@@ -67,10 +65,7 @@ const {
       <>
         <div class="right">
           <div class="image">
-            <img
-              src="/img/lokation_2.webp"
-              alt=""
-            />
+            <img {src} alt="" />
           </div>
           <div class="content">
             <h3>{titel}</h3>

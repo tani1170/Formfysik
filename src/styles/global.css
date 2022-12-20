@@ -150,6 +150,13 @@ select {
   margin: 0;
 }
 
+.value-text {
+  font-family: kanit, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 27px;
+}
+
 .guide-bold {
   font-family: kanit, sans-serif;
   font-weight: 500;

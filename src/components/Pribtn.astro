@@ -4,12 +4,12 @@ import "../styles/global.css";
 const { content } = Astro.props;
 ---
 
-<button id="primary-btn" class="slide"
+<button id="pribtn" class="slide"
   ><p class="font-btn">{content}</p>
 </button>
 
 <style>
-  #primary-btn {
+  #pribtn {
     background-color: var(
       --color-tabel-text
     );
@@ -27,7 +27,7 @@ const { content } = Astro.props;
     color: var(--color-footer-text);
   }
 
-  #primary-btn:hover {
+  #pribtn:hover {
     box-shadow: inset 300px 0 0 0
       var(--color-btn-hover);
     cursor: pointer;
